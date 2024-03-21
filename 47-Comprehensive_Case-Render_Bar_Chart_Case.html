@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      display: flex;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      margin: 50px auto;
+      height: 300px;
+      align-items: flex-end;
+      justify-content: space-around;
+      width: 700px;
+      text-align: center;
+    }
+    .box div {
+      display: flex;
+      background-color: antiquewhite;
+      margin: 0px 10px;
+      width: 150px;
+      flex-direction: column;
+    }
+    .box div span {
+      margin-top: -20px;
+    }
+    h4 {
+      margin-bottom: -30px;
+    }
+  </style>
+</head>
+<body>
+</body>
+<script>
+  // Pop up four boxes to enter data for each quarter
+  // Declare a new array to store the user input data
+  // Print the data
+  let arr = []
+  for (let i = 1; i <= 4; i++) {
+    arr.push(prompt(`Please enter the data for the ${i}th quarter:`))
+  }
+  document.write(`<div class="box">`)
+  for (let i = 0; i < arr.length; i++) {
+    document.write(` <div>
+      <span style="height: ${arr[i]}px">${arr[i]}</span>
+      <h4>${i + 1} season</h4>
+    </div>`)
+  }
+  document.write(`</div>`)
+</script>
+</html>

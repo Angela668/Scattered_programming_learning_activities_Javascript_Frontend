@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Requirement: Find the sum and average of all the numbers in the array [2, 1, 6, 7, 4].
+    // pseudocode:
+    // Create a variable sum.
+    // Find the sum of the numbers in the array.
+    // Find the average by dividing sum by the length of the array.
+    // Print the results.
+
+    let arr = [2, 1, 6, 7, 4];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    document.write(`The sum of the array is: ${sum}`);
+    document.write("<br>");
+    document.write(`The average of the array is: ${sum / arr.length}`);
+  </script>
+</body>
+</html>

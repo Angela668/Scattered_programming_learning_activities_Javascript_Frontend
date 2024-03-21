@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 600px;
+      text-align: center;
+    }
+    table,
+    th,
+    td {
+      border: 2px solid blue;
+      border-collapse: collapse;
+    }
+    caption {
+      font-size: 20px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    tr {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    table tr:nth-child(1) {
+      background-color: antiquewhite;
+    }
+    table tr:not(:first-child):hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Information Summary</h2>
+  <table>
+    <caption>
+      Student List
+    </caption>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Hometown</th>
+    </tr>
+    <script>
+      let students = [
+        { name: 'John', age: 18, gender: 'Male', hometown: 'Hebei Province' },
+        { name: 'Angel', age: 19, gender: 'Female', hometown: 'Henan Province' },
+        { name: 'Ethan', age: 16, gender: 'Male', hometown: 'NSW' },
+        { name: 'Babie', age: 15, gender: 'Female', hometown: 'Sydney' },
+        { name: 'Jenny', age: 17, gender: 'Female', hometown: 'Melbourne' },
+      ];
+  
+      for (let i = 0; i < students.length; i++) {
+        document.write(`
+          <tr>
+            <td>${i + 1}</td>
+            <td>${students[i].name}</td>
+            <td>${students[i].age}</td>
+            <td>${students[i].gender}</td>
+            <td>${students[i].hometown}</td>
+          </tr>
+        `);
+      }
+    </script>
+  </table>
+</body>
+</html>

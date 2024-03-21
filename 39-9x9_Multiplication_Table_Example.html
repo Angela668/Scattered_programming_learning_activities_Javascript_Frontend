@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+  <style>
+    span {
+      display: inline-block;
+      border: 1px solid pink;
+      width: 70px;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 4px rgba(255, 194, 204, 0.4);
+      background-color: rgba(250, 235, 215, 0.1);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Case 2: Print a 9x9 multiplication table
+    // pseudocode:
+    // Use nested for loops to achieve
+    // Modify the variable i
+    // Print output on the page
+
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(`<span>${j} * ${i} = ${i * j}</span>`)
+      }
+      document.write('<br>')
+    }
+  </script>
+</body>
+</html>

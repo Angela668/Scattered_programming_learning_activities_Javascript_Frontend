@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Requirement: User inputs seconds, automatically converts to hours, minutes and seconds.
+    // pseudocode:
+    // User inputs total seconds (note the default value)
+    // Calculate hours, minutes and seconds (encapsulated function), which includes zero padding
+    // Print output
+
+    let second = +prompt('Please enter the total number of seconds:')
+    function getTimer(t) {
+      // Start counting hours, minutes and seconds
+      let h = parseInt((t / 60 / 60) % 24)
+      let m = parseInt((t / 60) % 60)
+      let s = parseInt(t % 60)
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+      return `The converted time is ${h} hours ${m} minutes ${s} seconds.`
+    }
+    let time = getTimer(second)
+    document.write(time)
+  </script>
+</body>
+</html>

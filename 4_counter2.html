@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数 createCounter(init):
+      //     创建一个名为 Counter 的类，具有 init 和 presentCount 两个属性
+      //     Counter 类包含三个方法：increment、decrement 和 reset，用于增加、减少和重置当前值
+      //     返回一个新的 Counter 实例，初始化值为传入的 init
+
+      // Counter 类：
+      //     属性：
+      //         init：初始值
+      //         presentCount：当前值
+      //     方法：
+      //         increment()：当前值加 1
+      //         decrement()：当前值减 1
+      //         reset()：重置当前值为初始值
+
+      // createCounter 函数：
+      //     接受一个参数 init
+      //     返回一个 Counter 实例，初始化值为 init
+
+      // class Counter{
+      //   constructor(init){
+      //     this.init = init;
+      //     this.presentCount = init;
+
+      //   }
+
+      //   increment(){
+      //     this.presentCount+=1;
+      //     return presentCount;
+
+      //   }
+      //   decrement(){
+      //     this.presentCount-=1;
+      //     return presentCount;
+
+      //   }
+      //   reset(){
+      //     this.presentCount = init;
+      //     return presentCount
+
+      //   }
+
+      // }
+      // const createCounter = function(unit){
+      //   return new Counter(unit)
+      // }
+
+      // console.log(createCounter(5));
+
+      // function createCounter(unit){
+      //   let currentValue = unit;
+      //   return{
+      //     increment(){
+      //       currentValue++;
+      //       return currentValue;
+      //     },
+
+      //      decrement(){
+      //       currentValue--;
+      //       return currentValue;
+      //     },
+      //     reset(value){
+      //       currentValue = value;
+      //       return currentValue;
+      //     },
+
+      //   }
+      // }
+      // const newCreateCounter=createCounter(5)
+      // newCreateCounter.increment();
+      // newCreateCounter.decrement();
+      //  newCreateCounter.reset();
+      //  console.log(newCreateCounter.increment());
+
+      function createCounter(init) {
+        let currentValue = init
+
+        function increment() {
+          return ++currentValue
+        }
+        function decrement() {
+          return --currentValue
+        }
+        function reset() {
+          return currentValue
+        }
+        return { increment, decrement, reset }
+      }
+
+      const newCreateCounter = createCounter(5)
+
+      console.log(newCreateCounter.reset())
+    </script>
+  </body>
+</html>

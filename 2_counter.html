@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //define a function(n)
+      //initialize the current value as n
+
+      //return a new function called increment
+
+      //store N in the variable current value
+      //current value ++
+      //return curren value
+
+      // function counter(n) {
+      //   let currentValue = n
+      //   return function increment() {
+      //     let returnValue = currentValue
+      //     currentValue++
+      //     return returnValue
+      //   }
+      // }
+      // // create new counter with a initial value10;
+      // const countFunc = counter(10)
+      // const result = []
+      // result.push(countFunc(10))
+      // result.push(countFunc(11))
+      // result.push(countFunc(12))
+      // console.log(result)
+
+      // // 定义 counter 函数
+      // function createCounter(n) {
+      //     // 初始化计数器的初始值为参数 n
+      //     let state = -1;
+
+      //     // 返回一个匿名函数
+
+      //     return()=>{
+
+      //         return n +(++state);
+      //     };
+      // }
+
+      // // 示例使用
+      // const countFunc = createCounter(10); // 创建一个新的计数器，初始值为 10
+      // const results = [];
+      // results.push(countFunc()); // 第一次调用，返回 10
+      // results.push(countFunc()); // 第二次调用，返回 11
+      // results.push(countFunc()); // 第三次调用，返回 12
+      // console.log(results); // 输出 [10, 11, 12]
+
+      // Define the createCounter function
+      function createCounter(n) {
+        // Define a variable state, initialized to -1
+        let state = -1
+        // Return an anonymous function
+        return () => {
+          // Increment state by 1 and return the value of n + state
+          return n + ++state
+        }
+      }
+
+      // Example usage
+      // Create a new counter with an initial value of 10
+      const counter = createCounter(10)
+      // Call the counter function and output the result
+      console.log(counter()) // Output: 10
+      console.log(counter()) // Output: 11
+      console.log(counter()) // Output: 12
+    </script>
+  </body>
+</html>

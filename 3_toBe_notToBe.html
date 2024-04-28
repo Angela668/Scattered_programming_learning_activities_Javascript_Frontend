@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Function expect(val):
+    // Returns an object with two methods:
+    //     - toBe(val2): 
+    //         If val is not equal to val2, returns true; otherwise, throws an error "Not Equal".
+    //     - notToBe(val2): 
+    //         If val is equal to val2, returns true; otherwise, throws an error "Equal".
+
+    
+    
+const expect = function(val) {
+  return {
+    toBe: (val2) => {
+      if (val !== val2) throw new Error("Not Equal");
+      else return true;
+    },
+    notToBe: (val2) => {
+      if (val === val2) throw new Error("Not Equal");
+      else return true;
+    }
+  };
+};
+
+// create an object with a variable(5)
+const result = expect (10)
+
+console.log(result.notToBe(10));
+
+
+
+  </script>
+</body>
+</html>
